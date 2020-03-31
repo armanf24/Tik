@@ -1,0 +1,72 @@
+/*Style Sheet*/
+
+/* universal margin */ 
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+} 
+/* table coloumn */
+.column {
+    float: left;
+    width: 200px;
+    height: 200px;
+  }
+/* table row */
+  .row::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+
+/* background image */
+body { 
+    background-image: url('images/background.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-size: cover;
+          
+  }
+  /* container that holds all the content together */
+#container {
+        margin: 100px auto;
+        width: 800px;
+        height: 600px;
+        background-color: rgba(255,255,255,0.5);
+        border: 1px solid black;
+        padding: 50px;
+  } 
+/* index page animals/startbutton */
+  #fontImage {
+    display: block;
+    margin-top: 10%;
+    margin-left: 40px;
+    margin-right: 100;
+    width: 100%;
+}
+
+/* result display */
+#results {
+    display: block;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/* Computer versus Player choice display */
+  #image-container{
+    margin: 100px auto;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+  }
+
+/* Start button */
+#imgStart {
+  margin: 100px;
+  margin-top: -15%;
+  margin-left: 100px;
+  margin-right:100px;
+
+}

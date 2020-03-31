@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Play!</title>
+    <link rel="stylesheet" href=styles.css>
+    <script src="game.js"></script>
+</head>
+<body>
+    <header>
+        <h1 align="center"> Elephant, Cat, Mouse </h1>
+    </header>
+
+    <div id="container">
+    <header>
+        <div class ="Pick one" align="center">
+                <h3 id="question"> Let's Play! Choose an animal. </h3>
+                <p id=player>Player: </p>
+                <p id=computer>Computer: </p>
+                <p id=tie>Tie: </p>
+                <p id=round>Round: </p>
+        </div>
+    </header>
+
+    <div class="row">
+        <div class="column">
+            <input type="image" onclick="playerChoice(0);" src="images/elephant.png" value= "Elephant" alt="Elephant" style="width:100%"/>
+        </div>
+        <div class="column">
+            <input type="image" onclick="playerChoice(1);" src="images/cat.png" value= "Cat" alt="Cat" style="width:100%"/>
+        </div>
+        <div class="column">
+            <input type="image" onclick="playerChoice(2);" src="images/mouse.png" value= "Mouse" alt="Mouse" style="width:100%"/>  
+        </div>
+    </div> 
+
+    <div class="results">
+        <div class="row">
+            <div class="column">
+                <h4 id = "playerBox"></h4>
+                <img id = "playerChoice" style="width:100%"/>
+            </div>
+            <div class="column">
+                <h4 id ="computerBox"></h4>
+                <img id = "computerChoice" style="width:100%"/>
+            </div>
+        </div> 
+    </div>
+    </div>
+</body>
+</html>
