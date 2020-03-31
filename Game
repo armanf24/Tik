@@ -1,0 +1,64 @@
+
+var playerScore = 0; 
+var computerScore = 0;
+var tieScore = 0;
+var round=0;
+var options = ["images/elephant.png", "images/cat.png", "images/mouse.png"];
+
+function rng(){
+    return Math.floor(Math.random()*3);
+}
+function playerChoice(playerChoice){
+
+    var player = playerChoice;
+    var computer = rng(); 
+
+    document.getElementById("playerChoice").src=options[player];
+    document.getElementById("computerChoice").src=options[computer];
+    document.getElementById("playerBox").innerHTML = "Player: ";
+    document.getElementById("computerBox").innerHTML = "Computer: ";
+
+    if(player === 0 && computer === 1){
+        winner = 0; 
+    }else if(player === 0 && computer === 2){
+        winner = 0;
+    }else if(player === 1 && computer === 2){
+        winner = 0;
+    }else if(player === 1 && computer === 0){
+        winner = 1;
+    }else if(player === 2 && computer === 1){
+        winner = 1;
+    }else if(player === 2 && computer === 0){
+        winner = 0;
+    }else if(player === computer){
+        winner = 3;
+    }
+
+    switch(winner){
+        case 0:
+            playerScore++;
+            var score = "Player: " + playerScore;
+            document.getElementById("player").innerHTML = score;
+            break;
+        case 1:
+            computerScore++;
+            var score = "Computer: " + computerScore;
+            document.getElementById("computer").innerHTML = score;
+            break;
+        case 3:
+            tieScore++;
+            var score = "Tie: " + tieScore;
+            document.getElementById("tie").innerHTML = score;
+            break;
+            default:
+    }
+    /* Rounds */
+    round++
+    document.getElementById("round").innerHTML= "Rounds: "+ round; 
+    }
+
+
+
+
+
+
